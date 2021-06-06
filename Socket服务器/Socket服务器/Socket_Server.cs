@@ -87,6 +87,10 @@ namespace Socket服务器.Socket服务器
             {
                 if (socketload == null)
                     return;
+             
+            }
+            finally
+            {
                 //继续回调监听客户端
                 socket.BeginAccept(new AsyncCallback(Socketcall_back), socket);
             }
@@ -181,6 +185,8 @@ namespace Socket服务器.Socket服务器
                 Sockets = new List<Socket>(); 
                 ComboBox.Items.Clear();//清空下拉
                 socketload.Close();//释放对象
+
+
                 socketload = null;
             }
         }

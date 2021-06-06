@@ -1,0 +1,12 @@
+1：先添加5个EF实体模型包
+Install-Package  Micorsoft.EntityFrameworkCore：EF框架的核心包
+Micorsoft.EntityFrameworkCore.SqlServer:针对SqlServer数据库的扩展，使用SqlServer数据库必须。类似的还有MySql，SqlLite等
+Micorsoft.EntityFrameworkCore.Tools
+Micorosft.EntityFrameworkCore.Design：用户根据现有的数据库生成模型代码等 
+Microsoft.EntityFrameworkCore.SqlServer.Design
+2：使用包控制台输入命令
+Scaffold-DbContext "Data Source=LAPTOP-INNCV6MO;Initial Catalog=Test;Integrated Security=True;"
+ Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models2
+其中  "Data Source=LAPTOP-INNCV6MO;Initial Catalog=Test;Integrated Security=True;"是链接字符串
+Models2是创建后文件夹名称
+Microsoft.EntityFrameworkCore.SqlServer -OutputDir 是需要运行的包名
